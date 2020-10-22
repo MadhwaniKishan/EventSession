@@ -13,12 +13,12 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider<ApiProvider>(
       create: (_) => ApiProvider(),
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Event Session',
         theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: MyHomePage(title: 'Flutter Demo Home Page'),
+        home: MyHomePage(title: 'Events'),
       ),
     );
   }
@@ -36,7 +36,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Provider.of<ApiProvider>(context, listen: false).getData();
   }
